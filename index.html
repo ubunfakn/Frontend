@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body style="background-image: url('1.jpg'); position: fixed; background-attachment: fixed; background-origin: border-box; background-size: cover;max-width: 100%;">
+    <header class="text-white mt-xxl-5" style="margin-left: 640px;">
+        <h1 style="font-family:'Times New Roman', Times, serif;font-weight:bolder; font-size: 90px;">Rock Paper Scissor</h1>
+    </header>
+    <div id="result-section" class="container" style="margin-left: 640px; margin-top: 60px;">
+        <br>
+    <em class="text-white" style="font-size: 40px;font-family:'Times New Roman', Times, serif;font-weight:bolder;">🙍 Player &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em>
+    <em class="text-white" style="font-size: 40px;font-family:'Times New Roman', Times, serif;font-weight:bolder;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ubunfakn 💻</em>
+    <br><br>
+    </div>
+
+    <div class="container text-white" style="margin-left: 740px; margin-top: 130px;">
+        <h2 style="font-family:'Times New Roman', Times, serif;font-weight:bolder; font-size: 50px;">Choose Your Move</h2><br><br>
+    </div>
+
+    <div id="add-button" class="container text-white" style="margin-left: 630px;">
+        <br>
+        <button type="button" onclick="Rock(this)" class="btn btn-outline-secondary text-white" style="font-size: 25px; background-color:darkgreen ;margin-right: 180px;">Rock</button>
+        <button type="button" onclick="Paper(this)" class="btn btn-outline-secondary text-white" style="font-size: 25px; background-color:darkgreen ;margin-right: 180px;">Paper</button>
+        <button type="button" onclick="Scissor(this)" class="btn btn-outline-secondary text-white" style="font-size: 25px; background-color:darkgreen ;margin-right: 180px;">Scissor</button>
+    </div>
+<br><br>
+    <script>
+
+        //num=1-> rock
+        //num=2-> paper
+        //num=3->scissor
+
+        let resultSection=document.getElementById("result-section");
+        let num;
+        let result;
+        let newele=document.createElement("em");
+        newele.className="text-white";
+        newele.style="font-size: 30px; margin-left:65px; font-family:'Times New Roman', Times, serif;font-weight:bolder; font-size: 50px;"
+        resultSection.appendChild(document.createElement("br"));
+
+        function Rock(currentElement)
+        {
+            let computer=Math.floor(Math.random()*3);
+            
+            num=0;
+            
+            if(computer===0)result="🤦🤦!!!Draw!!!🤦🤦";
+            else if(num==0 && computer==1)result="🥺🥺🥺ubunfakn won";
+            else if(num==0 && computer==2)result="👍👍Congrats! You won";
+
+            newele.textContent=result;
+            resultSection.appendChild(newele);
+        }
+
+        function Paper(currentElement)
+        {
+            let computer=Math.floor(Math.random()*3);
+
+            num=1;
+
+            if(computer===1)result="🤦🤦!!!Draw!!!🤦🤦";
+            else if(num==1 && computer==0)result="👍👍Congrats! You won";
+            else if(num==1 && computer==2)result="🥺🥺🥺ubunfakn won";
+
+            newele.textContent=result;
+            resultSection.appendChild(newele);
+        }
+
+        function Scissor(currentElement)
+        {
+            let computer=Math.floor(Math.random()*3);
+
+            num=2;
+
+            if(computer===2)result="🤦🤦!!!Draw!!!🤦🤦";
+            else if(num==2 && computer==0)result="🥺🥺🥺ubunfakn won";
+            else if(num==2 && computer==1)result="👍👍Congrats! You won";
+
+            newele.textContent=result;
+            resultSection.appendChild(newele);
+        }
+            
+    </script>
+
+</body>
+</html>
