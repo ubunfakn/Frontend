@@ -13,13 +13,12 @@
     <!-- margin-left: 640px; -->
     <div class="container">
     <header class="text-white text-center mt-5 my-5">
-        <h1 style="font-family:'Times New Roman', Times, serif;font-weight:bolder; font-size: 90px;" class="text-center"> Rock Paper Scissor</h1>
+        <h1 style="font-family:'Times New Roman', Times, serif;font-weight:bolder; font-size: 450%;" class="text-center"> Rock Paper Scissor</h1>
     </header>
     </div>
-    <div id="result-section" class="container mt-5 my-auto mb-5">
+    <div id="result-section" class="container mt-5 mb-5">
         <br>
-    <em class="text-white" style="font-size: 40px;font-family:'Times New Roman', Times, serif;font-weight:bolder;">🥷 Player</em>
-    <em class="text-white" style="font-size: 40px;font-family:'Times New Roman', Times, serif;font-weight:bolder;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ubunfakn 💻</em>
+    <em class="text-white" style="font-size: 40px;font-family:'Times New Roman', Times, serif;font-weight:bolder;word-spacing: 95px;">🥷Player  ubunfakn💻</em>
     <br><br><br>
     </div>
     <!-- "margin-left: 740px; margin-top: 130px;" -->
@@ -50,7 +49,7 @@
         let newele=document.createElement("em");
         newele.className="text-white my-4";
         // margin-left:65px;
-        newele.style="font-family:'Times New Roman', Times, serif;font-weight:bolder; font-size: 50px;"
+        newele.style="font-family:'Times New Roman', Times, serif;font-weight:bolder; font-size: 40px;"
         resultSection.appendChild(document.createElement("br"));
 
         function Rock(currentElement)
@@ -61,7 +60,7 @@
             
             if(computer===0)result="🤦🤦!!!Draw!!!🤦🤦";
             else if(num==0 && computer==1)result="🥺🥺🥺ubunfakn won";
-            else if(num==0 && computer==2)result="👍👍Congrats! You won";
+            else if(num==0 && computer==2)result="😜😜Congrats! You won";
 
             newele.textContent=result;
             resultSection.appendChild(newele);
@@ -74,7 +73,7 @@
             num=1;
 
             if(computer===1)result="🤦🤦!!!Draw!!!🤦🤦";
-            else if(num==1 && computer==0)result="👍👍Congrats! You won";
+            else if(num==1 && computer==0)result="😜😜Congrats! You won";
             else if(num==1 && computer==2)result="🥺🥺🥺ubunfakn won";
 
             newele.textContent=result;
@@ -89,7 +88,7 @@
 
             if(computer===2)result="🤦🤦!!!Draw!!!🤦🤦";
             else if(num==2 && computer==0)result="🥺🥺🥺ubunfakn won";
-            else if(num==2 && computer==1)result="👍👍Congrats! You won";
+            else if(num==2 && computer==1)result="😜😜Congrats! You won";
 
             newele.textContent=result;
             resultSection.appendChild(newele);
